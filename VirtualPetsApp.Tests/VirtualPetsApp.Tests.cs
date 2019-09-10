@@ -6,14 +6,13 @@ namespace VirtualPetsApp.Tests
     public class VirtualPetsApp
     {
         [Fact]
-        public void Game_State()
+        public void Pet_Has_Name()
         {
-            var virtualPetsApp = new VirtualPetsApp();
+            Pet userPets = new Pet();
 
-            var result = virtualPetsApp.Start(gameStarted);
+            userPets.Name = "name";
 
-            Assert.Equal("gameStarted", result);
-       
+            Assert.Equal("name", userPets.Name);
         }
     }
 }
