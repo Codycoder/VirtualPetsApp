@@ -6,13 +6,13 @@ namespace VirtualPetsApp.Tests
     public class VirtualPetsApp
     {
         [Fact]
-        public void Pet_Has_Name()
+        public void Show_Pet_Info()
         {
-            Pet userPets = new Pet();
+            //Act
 
-            userPets.Name = "name";
+            //Arrange
 
-            Assert.Equal("name", userPets.Name);
+            //Assert
         }
     }
 }
