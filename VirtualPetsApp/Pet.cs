@@ -28,11 +28,11 @@ namespace VirtualPetsApp
         }
         public void ShowInfo()
         {
-            Console.WriteLine("Pet Info" + "\nName " + Name + "\nSpecies: " + Species);
+            Console.WriteLine("Pet Info" + "\n\nName " + Name + "\nSpecies: " + Species);
         }
         public void ShowPetStatus()
         {
-            Console.WriteLine("Pet Status" + "\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health);
+            Console.WriteLine("Pet Status" + "\n\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health);
         }    
     }
 }
