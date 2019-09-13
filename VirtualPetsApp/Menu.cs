@@ -14,6 +14,8 @@ namespace VirtualPetsApp
             Console.WriteLine("Welcome to Virtual Pets App! Press \"P\" to play or any other key to quit.");
 
             string userStart = Console.ReadLine().ToLower();
+            Console.Clear();
+
             // Determine Start to Game
             while (userStart.Equals("p"))
             {
@@ -25,26 +27,35 @@ namespace VirtualPetsApp
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
+
                 if (menuChoice.Equals("e"))
                 {
                     userStart = "";
                 }
+
+
                 else if (menuChoice.Equals("a"))
                 {
                     Console.WriteLine("What kind of pet do you want?");
                     pet.Species = Console.ReadLine();
                     Console.WriteLine("What do you want to name your " + pet.Species + "?");
                     pet.Name = Console.ReadLine();
+                    Console.Clear();
                     pet.ShowInfo();
                 }
+
+
                 else if (menuChoice.Equals("s"))
                 {
                     pet.ShowPetStatus();
                 }
+
+
                 else if (menuChoice.Equals("i"))
                 {
                     pet.ShowInfo();
                 }
+                pet.LowerStats();
             }
 
             Console.WriteLine("Thanks for playing!!");

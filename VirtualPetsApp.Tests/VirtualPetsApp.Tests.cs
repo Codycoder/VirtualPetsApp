@@ -5,14 +5,18 @@ namespace VirtualPetsApp.Tests
 {
     public class VirtualPetsApp
     {
-        [Fact]
-        public void Show_Pet_Info()
-        {
-            //Act
+        private int status;
 
+        [Fact]
+        public void Lowering_Pet_Status_From_Menu()
+        {
             //Arrange
+            Pet pet = new Pet();
+            //Act
+            pet.LowerStats();
 
             //Assert
+            Assert.Equal(95, pet.Hunger);
         }
     }
 }
