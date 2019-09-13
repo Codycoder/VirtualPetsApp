@@ -11,19 +11,22 @@ namespace VirtualPetsApp
             Pet pet = new Pet();
 
 
-            Console.WriteLine("Welcome to Virtual Pets App! Press \"P\" to play or any other key to quit.");
+            Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or any other key to quit.");
 
             string userStart = Console.ReadLine().ToLower();
             Console.Clear();
 
             // Determine Start to Game
-            while (userStart.Equals("p"))
+            while (userStart.Equals("start"))
             {
                 Console.WriteLine("You are In Game");
                 Console.WriteLine("Press E to Exit");
                 Console.WriteLine("To create a pet press \"A\"");
                 Console.WriteLine("To view your pet's info press \"I\"");
                 Console.WriteLine("To view your pet status, hit \"S\"");
+                Console.WriteLine("To feed your pet, hit \"F\"");
+                Console.WriteLine("To play your pet, hit \"P\"");
+                Console.WriteLine("To take your pet to the doc, hit \"D\"");
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
@@ -42,6 +45,7 @@ namespace VirtualPetsApp
                     pet.Name = Console.ReadLine();
                     Console.Clear();
                     pet.ShowInfo();
+                    Console.WriteLine(" ");
                 }
 
 
@@ -55,9 +59,24 @@ namespace VirtualPetsApp
                 {
                     pet.ShowInfo();
                 }
+                
+
+                else if (menuChoice.Equals("f"))
+                {
+                    pet.FeedPet();
+                }
+                else if (menuChoice.Equals("p"))
+                {
+                    pet.PlayWithPet();
+                }
+                else if (menuChoice.Equals("d"))
+                {
+                    pet.DrugPet();
+                }
+                pet.ShowPetStatus();
                 pet.LowerStats();
             }
-
+            Console.Clear();
             Console.WriteLine("Thanks for playing!!");
             Console.ReadKey();
         }
