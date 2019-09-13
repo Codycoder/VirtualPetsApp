@@ -3,7 +3,7 @@ using Xunit;
 
 namespace VirtualPetsApp.Tests
 {
-    public class VirtualPetsApp
+    public class PetTests
     {
         [Fact]
         public void Lowering_Pet_Status_From_Menu()
