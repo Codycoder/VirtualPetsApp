@@ -28,11 +28,11 @@ namespace VirtualPetsApp
                 Console.WriteLine("To feed your pet, hit \"F\"" + "\n");
                 Console.WriteLine("To play your pet, hit \"P\"" + "\n");
                 Console.WriteLine("To take your pet to the Doctor, hit \"D\"" + "\n");
-                Console.WriteLine("To view all pets in the shelter, hit \"V\"" + "\n");
+                Console.WriteLine("To view all pets in the shelter, hit \"II\"" + "\n");
                 Console.WriteLine("To feed all pets in the shelter, hit \"FF\"" + "\n");
                 Console.WriteLine("To play with all pets in the shelter, hit \"PP\"" + "\n");
                 Console.WriteLine("To take all pets to the Doctor from the shelter, hit \"DD\"" + "\n");
-                Console.WriteLine("To view the status of all pets in the shelter, hit \"SS\"" + "\n");
+
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
@@ -69,29 +69,47 @@ namespace VirtualPetsApp
                     pet.ShowInfo();
                 }
 
+                else if (menuChoice.Equals("ii"))
+                {
+                    shelter.ShowAllPetsInfo();
+                }
 
                 else if (menuChoice.Equals("f"))
                 {
                     pet.FeedPet();
                     Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise!");
                 }
+
+                else if (menuChoice.Equals("FF"))
+                {
+                    shelter.FeedPet();
+                    Console.WriteLine("You have Fed Your Pets! Might Be Time for Some Exercise!");
+                }
+
                 else if (menuChoice.Equals("p"))
                 {
                     pet.PlayWithPet();
                     Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY!");
                 }
-                else if (menuChoice.Equals("v"))
+
+                else if (menuChoice.Equals("pp"))
                 {
-                    pet.DisplayList();
-                    Console.WriteLine("Here are All Pets in the Shelter" + pet);
+                    shelter.PlayWithAll();
+                    Console.WriteLine("You just played with all of your pets, they are SOOO happy!");
                 }
+                                
                 else if (menuChoice.Equals("d"))
                 {
                     pet.DrugPet();
                     Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier!");
                 }
-                pet.ShowPetStatus();
-                pet.LowerStats();
+
+                else if (menuChoice.Equals("DD"))
+                {
+                    shelter.VetPets();
+                    Console.WriteLine("You just took all of your pets to the Doctor. They look MUCH healthier!");
+                }
+                shelter.LowerAllStats();
             }
             Console.Clear();
             Console.WriteLine("Thanks for playing!!");

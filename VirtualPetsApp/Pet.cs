@@ -58,9 +58,6 @@ namespace VirtualPetsApp
         {
             Health += 15;
         }
-        public void DisplayList()
-        {
-            // Console.WriteLine(pet);
-        }
+       
     }
 }
