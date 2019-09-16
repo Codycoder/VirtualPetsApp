@@ -20,15 +20,15 @@ namespace VirtualPetsApp
             while (userStart.Equals("start"))
             {
                 Console.WriteLine("______________________________________________________________________________________________ \n");
-                Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy." + "\n " + "\nKeep your hunger and boredom levels down, and your health level up!" + "\n");
+                Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy.                     |\n \nKeep your hunger and boredom levels down, and your health level up!                           |\n");
                 
-                Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info \n");
+                Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info                      |\n");
 
-                Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet \n");
+                Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet                      |\n");
 
-                Console.WriteLine("\"D\" Pet to Vet         | \"II\" View shelter pets \n");
+                Console.WriteLine("\"D\" Pet to Vet         | \"II\" View shelter pets                                               |\n");
 
-                Console.WriteLine("\"FF\" Feed shelter pets | \"PP\" Play with shelter pets | \"DD\" Take shelter pets to vet");
+                Console.WriteLine("\"FF\" Feed shelter pets | \"PP\" Play with shelter pets | \"DD\" Take shelter pets to vet          |");
 
                 Console.WriteLine("______________________________________________________________________________________________");
 
