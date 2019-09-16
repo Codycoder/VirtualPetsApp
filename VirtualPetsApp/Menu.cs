@@ -19,19 +19,18 @@ namespace VirtualPetsApp
             // Determine Start to Game
             while (userStart.Equals("start"))
             {
+                Console.WriteLine("______________________________________________________________________________________________ \n");
                 Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy." + "\n " + "\nKeep your hunger and boredom levels down, and your health level up!" + "\n");
+                
+                Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info \n");
 
-                Console.WriteLine("Press E to Exit" + "\n");
-                Console.WriteLine("To create a pet press \"A\"" + "\n");
-                Console.WriteLine("To view your pet's info press \"I\"" + "\n");
-                Console.WriteLine("To view your pet status, hit \"S\"" + "\n");
-                Console.WriteLine("To feed your pet, hit \"F\"" + "\n");
-                Console.WriteLine("To play your pet, hit \"P\"" + "\n");
-                Console.WriteLine("To take your pet to the Doctor, hit \"D\"" + "\n");
-                Console.WriteLine("To view all pets in the shelter, hit \"II\"" + "\n");
-                Console.WriteLine("To feed all pets in the shelter, hit \"FF\"" + "\n");
-                Console.WriteLine("To play with all pets in the shelter, hit \"PP\"" + "\n");
-                Console.WriteLine("To take all pets to the Doctor from the shelter, hit \"DD\"" + "\n");
+                Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet \n");
+
+                Console.WriteLine("\"D\" Pet to Vet         | \"II\" View shelter pets \n");
+
+                Console.WriteLine("\"FF\" Feed shelter pets | \"PP\" Play with shelter pets | \"DD\" Take shelter pets to vet");
+
+                Console.WriteLine("______________________________________________________________________________________________");
 
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
@@ -53,16 +52,13 @@ namespace VirtualPetsApp
                     pet.Name = Console.ReadLine();
                     shelter.AddPetToList(pet);
                     Console.Clear();
-                    pet.ShowInfo();
                     Console.WriteLine(" ");
                 }
-
 
                 else if (menuChoice.Equals("s"))
                 {
                     pet.ShowPetStatus();
                 }
-
 
                 else if (menuChoice.Equals("i"))
                 {
@@ -77,37 +73,37 @@ namespace VirtualPetsApp
                 else if (menuChoice.Equals("f"))
                 {
                     pet.FeedPet();
-                    Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise!");
+                    Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise! \n");
                 }
 
-                else if (menuChoice.Equals("FF"))
+                else if (menuChoice.Equals("ff"))
                 {
                     shelter.FeedPet();
-                    Console.WriteLine("You have Fed Your Pets! Might Be Time for Some Exercise!");
+                    Console.WriteLine("You have Fed Your Pets! Might Be Time for Some Exercise! \n");
                 }
 
                 else if (menuChoice.Equals("p"))
                 {
                     pet.PlayWithPet();
-                    Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY!");
+                    Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY! \n");
                 }
 
                 else if (menuChoice.Equals("pp"))
                 {
                     shelter.PlayWithAll();
-                    Console.WriteLine("You just played with all of your pets, they are SOOO happy!");
+                    Console.WriteLine("You just played with all of your pets, they are SOOO happy!\n");
                 }
                                 
                 else if (menuChoice.Equals("d"))
                 {
                     pet.DrugPet();
-                    Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier!");
+                    Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier! \n");
                 }
 
-                else if (menuChoice.Equals("DD"))
+                else if (menuChoice.Equals("dd"))
                 {
                     shelter.VetPets();
-                    Console.WriteLine("You just took all of your pets to the Doctor. They look MUCH healthier!");
+                    Console.WriteLine("You just took all of your pets to the Doctor. They look MUCH healthier! \n");
                 }
                 shelter.LowerAllStats();
             }
