@@ -9,7 +9,7 @@ namespace VirtualPetsApp
         public void Start()
         {
             Pet pet = new Pet();
-
+            Shelter shelter = new Shelter();
 
             Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or any other key to quit.");
 
@@ -45,10 +45,13 @@ namespace VirtualPetsApp
 
                 else if (menuChoice.Equals("a"))
                 {
+                    pet = new Pet();
+
                     Console.WriteLine("What kind of pet do you want?");
                     pet.Species = Console.ReadLine();
                     Console.WriteLine("What do you want to name your " + pet.Species + "?");
                     pet.Name = Console.ReadLine();
+                    shelter.AddPetToList(pet);
                     Console.Clear();
                     pet.ShowInfo();
                     Console.WriteLine(" ");
@@ -76,6 +79,11 @@ namespace VirtualPetsApp
                 {
                     pet.PlayWithPet();
                     Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY!");
+                }
+                else if (menuChoice.Equals("v"))
+                {
+                    pet.DisplayList();
+                    Console.WriteLine("Here are All Pets in the Shelter" + pet);
                 }
                 else if (menuChoice.Equals("d"))
                 {

@@ -8,10 +8,9 @@ namespace VirtualPetsApp
     {
         public List<Pet> pets = new List<Pet>();
 
-        public void AddPet(string species, string name)
+        public void AddPetToList(Pet pet)
         {
-            Pet pet = new Pet(species, name);
-
+         
             pets.Add(pet);
         }
     }
