@@ -19,14 +19,15 @@ namespace VirtualPetsApp
             // Determine Start to Game
             while (userStart.Equals("start"))
             {
-                Console.WriteLine("You are In Game");
-                Console.WriteLine("Press E to Exit");
-                Console.WriteLine("To create a pet press \"A\"");
-                Console.WriteLine("To view your pet's info press \"I\"");
-                Console.WriteLine("To view your pet status, hit \"S\"");
-                Console.WriteLine("To feed your pet, hit \"F\"");
-                Console.WriteLine("To play your pet, hit \"P\"");
-                Console.WriteLine("To take your pet to the doc, hit \"D\"");
+                Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy." + "\n " + "\nKeep your hunger and boredom levels down, and your health level up!" + "\n");
+
+                Console.WriteLine("Press E to Exit" + "\n");
+                Console.WriteLine("To create a pet press \"A\"" + "\n");
+                Console.WriteLine("To view your pet's info press \"I\"" + "\n");
+                Console.WriteLine("To view your pet status, hit \"S\"" + "\n");
+                Console.WriteLine("To feed your pet, hit \"F\"" + "\n");
+                Console.WriteLine("To play your pet, hit \"P\"" + "\n");
+                Console.WriteLine("To take your pet to the Doctor, hit \"D\"" + "\n");
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
@@ -59,19 +60,22 @@ namespace VirtualPetsApp
                 {
                     pet.ShowInfo();
                 }
-                
+
 
                 else if (menuChoice.Equals("f"))
                 {
                     pet.FeedPet();
+                    Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise!");
                 }
                 else if (menuChoice.Equals("p"))
                 {
                     pet.PlayWithPet();
+                    Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY!");
                 }
                 else if (menuChoice.Equals("d"))
                 {
                     pet.DrugPet();
+                    Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier!");
                 }
                 pet.ShowPetStatus();
                 pet.LowerStats();
