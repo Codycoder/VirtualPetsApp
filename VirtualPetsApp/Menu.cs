@@ -28,6 +28,11 @@ namespace VirtualPetsApp
                 Console.WriteLine("To feed your pet, hit \"F\"" + "\n");
                 Console.WriteLine("To play your pet, hit \"P\"" + "\n");
                 Console.WriteLine("To take your pet to the Doctor, hit \"D\"" + "\n");
+                Console.WriteLine("To view all pets in the shelter, hit \"V\"" + "\n");
+                Console.WriteLine("To feed all pets in the shelter, hit \"FF\"" + "\n");
+                Console.WriteLine("To play with all pets in the shelter, hit \"PP\"" + "\n");
+                Console.WriteLine("To take all pets to the Doctor from the shelter, hit \"DD\"" + "\n");
+                Console.WriteLine("To view the status of all pets in the shelter, hit \"SS\"" + "\n");
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
