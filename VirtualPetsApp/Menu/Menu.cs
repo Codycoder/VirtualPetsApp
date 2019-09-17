@@ -8,7 +8,7 @@ namespace VirtualPetsApp
     {
         public void Start()
         {
-            Pet pet = new Pet();
+            OrgPet pet = new OrgPet();
             Shelter shelter = new Shelter();
 
             Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or any other key to quit.");
@@ -24,9 +24,9 @@ namespace VirtualPetsApp
                 
                 Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info                      |\n");
 
-                Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet                      |\n");
+                Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with OrgPet                      |\n");
 
-                Console.WriteLine("\"D\" Pet to Vet         | \"II\" View shelter pets                                               |\n");
+                Console.WriteLine("\"D\" OrgPet to Vet         | \"II\" View shelter pets                                               |\n");
 
                 Console.WriteLine("\"FF\" Feed shelter pets | \"PP\" Play with shelter pets | \"DD\" Take shelter pets to vet          |");
 
@@ -44,7 +44,7 @@ namespace VirtualPetsApp
 
                 else if (menuChoice.Equals("a"))
                 {
-                    pet = new Pet();
+                    pet = new OrgPet();
 
                     Console.WriteLine("What kind of pet do you want?");
                     pet.Species = Console.ReadLine();
@@ -73,7 +73,7 @@ namespace VirtualPetsApp
                 else if (menuChoice.Equals("f"))
                 {
                     pet.FeedPet();
-                    Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise! \n");
+                    Console.WriteLine("You have Fed Your OrgPet! Might Be Time for Some Exercise! \n");
                 }
 
                 else if (menuChoice.Equals("ff"))
@@ -85,7 +85,7 @@ namespace VirtualPetsApp
                 else if (menuChoice.Equals("p"))
                 {
                     pet.PlayWithPet();
-                    Console.WriteLine("You Just Played With Your Pet, It's SO HAPPY! \n");
+                    Console.WriteLine("You Just Played With Your OrgPet, It's SO HAPPY! \n");
                 }
 
                 else if (menuChoice.Equals("pp"))
@@ -97,7 +97,7 @@ namespace VirtualPetsApp
                 else if (menuChoice.Equals("d"))
                 {
                     pet.DrugPet();
-                    Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier! \n");
+                    Console.WriteLine("You Just Took Your OrgPet to the Doctor. It looks MUCH Healthier! \n");
                 }
 
                 else if (menuChoice.Equals("dd"))

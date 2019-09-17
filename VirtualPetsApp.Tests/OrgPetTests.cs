@@ -3,13 +3,13 @@ using Xunit;
 
 namespace VirtualPetsApp.Tests
 {
-    public class PetTests
+    public class OrgPetTests
     {
         [Fact]
         public void Lowering_Pet_Status_From_Menu()
         {
             //Arrange
-            Pet pet = new Pet();
+            OrgPet pet = new OrgPet();
             //Act
             pet.LowerStats();
 
@@ -20,7 +20,7 @@ namespace VirtualPetsApp.Tests
         [Fact]
         public void Feed_Pet_Command()
          {
-            Pet pet = new Pet();
+            OrgPet pet = new OrgPet();
             {
                 pet.LowerStats();
             }

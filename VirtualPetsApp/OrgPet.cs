@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPetsApp
 {
-    public class Pet
+    public class OrgPet
     {
         public string Name { get; set; }
         public string Species { get; set; }
@@ -13,7 +13,7 @@ namespace VirtualPetsApp
         public int Boredom { get; set; }
         public int Health { get; set; }
 
-        public Pet()
+        public OrgPet()
         {
             Hunger = 0;
             Boredom = 0;
@@ -21,7 +21,7 @@ namespace VirtualPetsApp
         }
         
 
-        public Pet(string name, string species)
+        public OrgPet(string name, string species)
         {
             Name = name;
             Species = species;
@@ -29,12 +29,12 @@ namespace VirtualPetsApp
 
         public void ShowInfo()
         {
-            Console.WriteLine("Pet Info" + "\nName " + Name + "\nSpecies: " + Species);
+            Console.WriteLine("OrgPet Info" + "\nName " + Name + "\nSpecies: " + Species);
         }
 
         public void ShowPetStatus()
         {
-            Console.WriteLine("Pet Status" + "\n\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health + "\n");
+            Console.WriteLine("OrgPet Status" + "\n\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health + "\n");
         }
 
         public void LowerStats()
