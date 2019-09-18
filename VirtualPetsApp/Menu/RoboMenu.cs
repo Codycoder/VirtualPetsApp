@@ -6,9 +6,10 @@ namespace VirtualPetsApp.Menu
 {
     class RoboMenu : MasterMenu
     {
-        static public void RoboStart()
+          static  Pets.RoboPet pet = new Pets.RoboPet();
+
+        static public void RoboStart(Shelter shelter)
         {
-            Pets.RoboPet pet = new Pets.RoboPet();
 
             string userStart = Console.ReadLine().ToLower();
             Console.Clear();
@@ -42,13 +43,14 @@ namespace VirtualPetsApp.Menu
                 {
                     pet = new Pets.RoboPet();
 
-                    Console.WriteLine("What kind of pet do you want?");
+                    Console.WriteLine("What kind of Robotic pet do you want?");
                     pet.Species = Console.ReadLine();
                     Console.WriteLine("What do you want to name your " + pet.Species + "?");
                     pet.Name = Console.ReadLine();
 
-                    MasterMenu.shelter.AddPetToList(pet);
+                    shelter.AddPetToList(pet);
                     
+                                        
                     Console.Clear();
                     Console.WriteLine(" ");
                 }
@@ -108,6 +110,21 @@ namespace VirtualPetsApp.Menu
             Console.Clear();
             Console.WriteLine("Thanks for playing!!");
             Console.ReadKey();
+        }
+
+        static public void CreateRoboPet(Shelter shelter)
+        {
+            pet = new Pets.RoboPet();
+
+            Console.WriteLine("What kind of Robotic pet do you want?");
+            pet.Species = Console.ReadLine();
+            Console.WriteLine("What do you want to name your " + pet.Species + "?");
+            pet.Name = Console.ReadLine();
+
+            shelter.AddPetToList(pet);
+
+
+            Console.Clear();
         }
 
     }

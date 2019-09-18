@@ -6,7 +6,7 @@ namespace VirtualPetsApp.Menu
 {
     public class OrgMenu : MasterMenu
     {
-        static public void OrgStart()
+        static public void OrgStart(Shelter shelter)
         {
             OrgPet pet = new OrgPet();
 
@@ -45,7 +45,7 @@ namespace VirtualPetsApp.Menu
                 {
                     pet = new OrgPet();
 
-                    Console.WriteLine("What kind of pet do you want?");
+                    Console.WriteLine("What kind of Organic pet do you want?");
                     pet.Species = Console.ReadLine();
                     Console.WriteLine("What do you want to name your " + pet.Species + "?");
                     pet.Name = Console.ReadLine();
@@ -72,7 +72,7 @@ namespace VirtualPetsApp.Menu
                 else if (menuChoice.Equals("f"))
                 {
                     pet.FeedPet();
-                    Console.WriteLine("You have Fed Your OrgPet! Might Be Time for Some Exercise! \n");
+                    Console.WriteLine("You have Fed Your Organic! Might Be Time for Some Exercise! \n");
                 }
 
                 else if (menuChoice.Equals("ff"))

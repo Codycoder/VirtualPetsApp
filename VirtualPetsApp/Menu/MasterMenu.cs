@@ -6,9 +6,10 @@ namespace VirtualPetsApp
 {
     public class MasterMenu
     {
+        public Shelter shelter = new Shelter();
+
         public void Start()
         {
-            Shelter shelter = new Shelter();
 
             Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or press \"E\" to quit.");
 
@@ -32,12 +33,13 @@ namespace VirtualPetsApp
 
                 if (menuChoice.Equals("o"))
                 {
-                    Menu.OrgMenu.OrgStart();
+                    Menu.OrgMenu.OrgStart(shelter);
                 }
                 
                 if (menuChoice.Equals("r"))
                 {
-                    Menu.RoboMenu.RoboStart();
+                    Menu.RoboMenu.CreateRoboPet(shelter);
+                    Menu.RoboMenu.RoboStart(shelter);
                 }
 
                 shelter.LowerAllStats();
