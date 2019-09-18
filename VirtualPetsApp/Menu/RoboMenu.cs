@@ -4,12 +4,11 @@ using System.Text;
 
 namespace VirtualPetsApp.Menu
 {
-    class RoboMenu
+    class RoboMenu : MasterMenu
     {
         static public void RoboStart()
         {
-            OrgPet pet = new OrgPet();
-            Shelter shelter = new Shelter();
+            Pets.RoboPet pet = new Pets.RoboPet();
 
             string userStart = Console.ReadLine().ToLower();
             Console.Clear();
@@ -41,13 +40,15 @@ namespace VirtualPetsApp.Menu
 
                 else if (menuChoice.Equals("a"))
                 {
-                    pet = new OrgPet();
+                    pet = new Pets.RoboPet();
 
                     Console.WriteLine("What kind of pet do you want?");
                     pet.Species = Console.ReadLine();
                     Console.WriteLine("What do you want to name your " + pet.Species + "?");
                     pet.Name = Console.ReadLine();
-                    shelter.AddPetToList(pet);
+
+                    MasterMenu.shelter.AddPetToList(pet);
+                    
                     Console.Clear();
                     Console.WriteLine(" ");
                 }

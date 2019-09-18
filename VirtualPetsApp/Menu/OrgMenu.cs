@@ -9,7 +9,6 @@ namespace VirtualPetsApp.Menu
         static public void OrgStart()
         {
             OrgPet pet = new OrgPet();
-            Shelter shelter = new Shelter();
 
             Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or any other key to quit.");
 
