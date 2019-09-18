@@ -6,7 +6,7 @@ namespace VirtualPetsApp
     {
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
+            MasterMenu menu = new MasterMenu();
 
             menu.Start();
         }

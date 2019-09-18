@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VirtualPetsApp
+namespace VirtualPetsApp.Menu
 {
-    public class Menu
+    public class OrgMenu : MasterMenu
     {
-        public void Start()
+        static public void OrgStart()
         {
             OrgPet pet = new OrgPet();
             Shelter shelter = new Shelter();
@@ -21,7 +21,7 @@ namespace VirtualPetsApp
             {
                 Console.WriteLine("______________________________________________________________________________________________ \n");
                 Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy.                     |\n \nKeep your hunger and boredom levels down, and your health level up!                           |\n");
-                
+
                 Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info                      |\n");
 
                 Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with OrgPet                      |\n");
@@ -93,7 +93,7 @@ namespace VirtualPetsApp
                     shelter.PlayWithAll();
                     Console.WriteLine("You just played with all of your pets, they are SOOO happy!\n");
                 }
-                                
+
                 else if (menuChoice.Equals("d"))
                 {
                     pet.DrugPet();
@@ -111,6 +111,5 @@ namespace VirtualPetsApp
             Console.WriteLine("Thanks for playing!!");
             Console.ReadKey();
         }
-
     }
 }
