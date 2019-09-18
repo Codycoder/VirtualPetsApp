@@ -2,26 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VirtualPetsApp
+namespace VirtualPetsApp.Pets
 {
-    public class OrgPet
+    public class Vpet
     {
         public string Name { get; set; }
         public string Species { get; set; }
-
-        public int Hunger { get; set; }
         public int Boredom { get; set; }
+        public int Hunger { get; set; }
         public int Health { get; set; }
 
-        public OrgPet()
+        public Vpet()
         {
             Hunger = 0;
             Boredom = 0;
             Health = 100;
         }
-        
 
-        public OrgPet(string name, string species)
+
+        public Vpet(string name, string species)
         {
             Name = name;
             Species = species;
@@ -37,27 +36,26 @@ namespace VirtualPetsApp
             Console.WriteLine("OrgPet Status" + "\n\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health + "\n");
         }
 
-        public void LowerStats()
+        public virtual void LowerStats()
         {
-            Hunger = Hunger + 5;
-            Boredom = Boredom + 5;
-            Health = Health - 10;
+            Hunger = Hunger + 1;
+            Boredom = Boredom + 1;
+            Health = Health - 1;
         }
 
-        public void FeedPet()
+        public virtual void FeedPet()
         {
-            Hunger -= 10;
+            Hunger -= 1;
         }
-        public void PlayWithPet()
+        public virtual void PlayWithPet()
         {
-            Boredom -= 15;
-            Hunger += 15;
+            Boredom -= 10;
+            Hunger += 5;
+            Health += 5;
+        }
+        public virtual void DrugPet()
+        {
             Health += 15;
         }
-        public void DrugPet()
-        {
-            Health += 15;
-        }
-       
     }
 }

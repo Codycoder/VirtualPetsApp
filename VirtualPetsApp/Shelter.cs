@@ -6,16 +6,16 @@ namespace VirtualPetsApp
 {
     public class Shelter
     {
-        public List<OrgPet> pets = new List<OrgPet>();
+        public List<Pets.Vpet> pets = new List<Pets.Vpet>();
 
-        public void AddPetToList(OrgPet pet)
+        public void AddPetToList(Pets.Vpet pet)
         {
          
             pets.Add(pet);
         }
         public void ShowAllPetsInfo()
         {
-            foreach (OrgPet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.ShowInfo();
                 pet.ShowPetStatus();
@@ -23,7 +23,7 @@ namespace VirtualPetsApp
         }
         public void ShowAllPetsStatus()
         {  
-            foreach(OrgPet pet in pets)
+            foreach(Pets.Vpet pet in pets)
             {
                 pet.ShowPetStatus(); 
             }
@@ -31,28 +31,28 @@ namespace VirtualPetsApp
         }
         public void FeedPet()
         {
-            foreach (OrgPet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.FeedPet();
             }
         }
         public void VetPets()
         {
-            foreach (OrgPet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.DrugPet();
             }
         }
         public void PlayWithAll()
         {
-            foreach (OrgPet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.PlayWithPet();
             }
         } 
         public void LowerAllStats()
         {
-            foreach (OrgPet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.LowerStats();
             }
