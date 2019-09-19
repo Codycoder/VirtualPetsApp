@@ -17,9 +17,9 @@ namespace VirtualPetsApp
             {
                 Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or press \"E\" to quit.");
 
-                Console.WriteLine("\n Would you like to create a Organic Pet or a Robotic Pet?");
-                Console.WriteLine("\"O\" for an Organic Pet \n Press \"R\" for a Robotic Pet");
-                Console.WriteLine("Press \"E\" to Exit");
+                //Console.WriteLine("\n Would you like to create a Organic Pet or a Robotic Pet?");
+                //Console.WriteLine("\"O\" for an Organic Pet \n Press \"R\" for a Robotic Pet");
+                //Console.WriteLine("Press \"E\" to Exit");
 
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
@@ -33,9 +33,9 @@ namespace VirtualPetsApp
                     Environment.Exit(0);
                 }
 
-                if (menuChoice.Equals("start"))
+                else if (menuChoice.Equals("start"))
                 {
-                    
+                    userStart = false;
                 }
             }
         }
@@ -54,11 +54,11 @@ namespace VirtualPetsApp
                     Console.WriteLine("______________________________________________________________________________________________ \n");
                     Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy.                     |\n \nKeep your hunger and boredom levels down, and your health level up!                           |\n");
 
-                    Console.WriteLine("\"E\" To exit            | \"A\" Create pet              | \"I\" View pet info                      |\n");
+                    Console.WriteLine("\"E\" To exit            | \"A\" Create pet                               |\n");
 
-                    Console.WriteLine("\"S\" View pet status    | \"F\" Feed pet                | \"P\" Play with OrgPet                      |\n");
+                    Console.WriteLine("\"SS\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet                      |\n");
 
-                    Console.WriteLine("\"D\" OrgPet to Vet         | \"II\" View shelter pets                                               |\n");
+                    Console.WriteLine("\"D\" Care for pet         | \"II\" View shelter pets                                               |\n");
 
                     Console.WriteLine("\"FF\" Feed shelter pets | \"PP\" Play with shelter pets | \"DD\" Take shelter pets to vet          |");
 
@@ -124,6 +124,11 @@ namespace VirtualPetsApp
                         }
 
 
+                    }
+
+                    else if (menuChoice.Equals("ss"))
+                    {
+                        shelter.ShowAllPetsStatus();
                     }
 
                     else if (menuChoice.Equals("ii"))

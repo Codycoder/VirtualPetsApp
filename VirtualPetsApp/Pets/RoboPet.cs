@@ -20,6 +20,17 @@ namespace VirtualPetsApp.Pets
 
         }
 
+        public override void ShowInfo()
+        {
+            Console.WriteLine("Robotic Pet Info" + "\nName " + Name + "\nSpecies: " + Species);
+        }
+
+        public override void ShowPetStatus()
+        {
+            Console.WriteLine("Robotic Pet Status" + "\n\nHunger: " + Hunger + "\nBoredom: " + Boredom + "\nHealth " + Health + "\n");
+        }
+
+
         public override void LowerStats()
         {
             Hunger = OilLevel -1;
