@@ -17,10 +17,6 @@ namespace VirtualPetsApp
             {
                 Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or press \"E\" to quit.");
 
-                //Console.WriteLine("\n Would you like to create a Organic Pet or a Robotic Pet?");
-                //Console.WriteLine("\"O\" for an Organic Pet \n Press \"R\" for a Robotic Pet");
-                //Console.WriteLine("Press \"E\" to Exit");
-
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
 
@@ -54,7 +50,7 @@ namespace VirtualPetsApp
                     Console.WriteLine("______________________________________________________________________________________________ \n");
                     Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy.                     |\n \nKeep your hunger and boredom levels down, and your health level up!                           |\n");
 
-                    Console.WriteLine("\"E\" To exit            | \"A\" Create pet                               |\n");
+                    Console.WriteLine("\"E\" To exit            | \"C\" Create pet      | \"A\" Adopt a pet                       |\n");
 
                     Console.WriteLine("\"SS\" View pet status    | \"F\" Feed pet                | \"P\" Play with Pet                      |\n");
 
@@ -74,7 +70,7 @@ namespace VirtualPetsApp
                     }
 
 
-                    else if (menuChoice.Equals("a"))
+                    else if (menuChoice.Equals("c"))
                     {
                         Console.WriteLine("\n Would you like to create a Organic Pet or a Robotic Pet?");
                         Console.WriteLine("\"O\" for an Organic Pet \n Press \"R\" for a Robotic Pet");
@@ -122,8 +118,13 @@ namespace VirtualPetsApp
                             Console.Clear();
                             Console.WriteLine(" ");
                         }
+                    }
 
-
+                    else if (menuChoice.Equals("a"))
+                    {
+                        Console.Clear();
+                        shelter.AdoptAPet();
+                        Console.Clear();
                     }
 
                     else if (menuChoice.Equals("ss"))
@@ -138,45 +139,61 @@ namespace VirtualPetsApp
 
                     else if (menuChoice.Equals("f"))
                     {
+                        Console.Clear();
                         shelter.ShowAllPetsInfo();
                         pet = shelter.SelectOnePet();
+                        pet.ShowPetInfoAndStatus();
                         pet.FeedPet();
-                        Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise! \n");
+                        Console.Clear();
+                        pet.ShowPetInfoAndStatus();
                     }
 
                     else if (menuChoice.Equals("ff"))
                     {
+                        Console.Clear();
+                        shelter.ShowAllInfoAndStatus();
                         shelter.FeedPet();
-                        Console.WriteLine("You have Fed Your Pets! Might Be Time for Some Exercise! \n");
+                        Console.Clear();
+                        shelter.ShowAllInfoAndStatus();
                     }
 
                     else if (menuChoice.Equals("p"))
                     {
+                        Console.Clear();
                         shelter.ShowAllPetsInfo();
                         pet = shelter.SelectOnePet();
                         pet.PlayWithPet();
-                        Console.WriteLine("You Just Played With Your Pet , It's SO HAPPY! \n");
+                        Console.Clear();
+                        pet.ShowPetInfoAndStatus();
                     }
 
                     else if (menuChoice.Equals("pp"))
                     {
+                        Console.Clear();
+                        shelter.ShowAllInfoAndStatus();
                         shelter.PlayWithAll();
-                        Console.WriteLine("You just played with all of your pets, they are SOOO happy!\n");
+                        Console.Clear();
+                        shelter.ShowAllInfoAndStatus();
                     }
 
                     else if (menuChoice.Equals("d"))
                     {
+                        Console.Clear();
                         shelter.ShowAllPetsInfo();
                         pet = shelter.SelectOnePet();
                         pet.DrugPet();
-                        Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier! \n");
+                        Console.Clear();
+                        pet.ShowPetInfoAndStatus();
                     }
 
                     else if (menuChoice.Equals("dd"))
                     {
+                        Console.Clear();
+                        shelter.ShowAllInfoAndStatus();
                         shelter.VetPets();
-                        Console.WriteLine("You just took all of your pets to the Doctor. They look MUCH healthier! \n");
+                        shelter.ShowAllInfoAndStatus();
                     }
+
                     shelter.LowerAllStats();
                 }
 
