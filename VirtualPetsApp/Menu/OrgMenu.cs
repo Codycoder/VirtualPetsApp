@@ -37,7 +37,7 @@ namespace VirtualPetsApp.Menu
 
                 if (menuChoice.Equals("e"))
                 {
-                    userStart = "";
+                    ExitGame();
                 }
 
 
@@ -106,9 +106,8 @@ namespace VirtualPetsApp.Menu
                 }
                 shelter.LowerAllStats();
             }
-            Console.Clear();
-            Console.WriteLine("Thanks for playing!!");
-            Console.ReadKey();
+
         }
+
     }
 }

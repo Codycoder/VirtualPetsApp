@@ -6,15 +6,15 @@ namespace VirtualPetsApp.Menu
 {
     class RoboMenu : MasterMenu
     {
-          static  Pets.RoboPet pet = new Pets.RoboPet();
+         static  Pets.RoboPet roboPet = new Pets.RoboPet();
+         static OrgPet orgPet = new OrgPet();
+
 
         static public void RoboStart(Shelter shelter)
         {
+            bool userStart = true;
 
-            string userStart = Console.ReadLine().ToLower();
-            Console.Clear();
-
-            while (userStart.Equals("start"))
+            while (userStart == true)
             {
                 Console.WriteLine("______________________________________________________________________________________________ \n");
                 Console.WriteLine("The Object of the Game is to create a pet, and keep it happy and healthy.                     |\n \nKeep your hunger and boredom levels down, and your health level up!                           |\n");
@@ -35,24 +35,60 @@ namespace VirtualPetsApp.Menu
 
                 if (menuChoice.Equals("e"))
                 {
-                    userStart = "";
+                    ExitGame();
                 }
 
 
                 else if (menuChoice.Equals("a"))
                 {
-                    pet = new Pets.RoboPet();
-
-                    Console.WriteLine("What kind of Robotic pet do you want?");
-                    pet.Species = Console.ReadLine();
-                    Console.WriteLine("What do you want to name your " + pet.Species + "?");
-                    pet.Name = Console.ReadLine();
-
-                    shelter.AddPetToList(pet);
-                    
-                                        
+                    Console.WriteLine("\n Would you like to create a Organic Pet or a Robotic Pet?");
+                    Console.WriteLine("\"O\" for an Organic Pet \n Press \"R\" for a Robotic Pet");
+                    Console.WriteLine("Press \"E\" to Exit");
+                    menuChoice = Console.ReadLine().ToLower();
                     Console.Clear();
-                    Console.WriteLine(" ");
+
+
+                    if (menuChoice.Equals("e"))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Thanks for playing!!");
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                    }
+
+                    if (menuChoice.Equals("o"))
+                    {
+                        orgPet = new OrgPet();
+
+                        Console.WriteLine("What kind of Organic pet do you want?");
+                        orgPet.Species = Console.ReadLine();
+                        Console.WriteLine("What do you want to name your " + orgPet.Species + "?");
+                        orgPet.Name = Console.ReadLine();
+
+                        shelter.AddPetToList(orgPet);
+
+
+                        Console.Clear();
+                        Console.WriteLine(" ");
+                    }
+
+                    if (menuChoice.Equals("r"))
+                    {
+                        roboPet = new Pets.RoboPet();
+
+                        Console.WriteLine("What kind of Robotic pet do you want?");
+                        roboPet.Species = Console.ReadLine();
+                        Console.WriteLine("What do you want to name your " + roboPet.Species + "?");
+                        roboPet.Name = Console.ReadLine();
+
+                        shelter.AddPetToList(roboPet);
+
+
+                        Console.Clear();
+                        Console.WriteLine(" ");
+                    }
+
+
                 }
 
                 else if (menuChoice.Equals("s"))
@@ -107,9 +143,6 @@ namespace VirtualPetsApp.Menu
                 }
                 shelter.LowerAllStats();
             }
-            Console.Clear();
-            Console.WriteLine("Thanks for playing!!");
-            Console.ReadKey();
         }
 
         static public void CreateRoboPet(Shelter shelter)

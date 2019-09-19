@@ -8,7 +8,11 @@ namespace VirtualPetsApp
         {
             MasterMenu menu = new MasterMenu();
 
+            
+
             menu.Start();
+
+            menu.InGame();
         }
     }
 }
