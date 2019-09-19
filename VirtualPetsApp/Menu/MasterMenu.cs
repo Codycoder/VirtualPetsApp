@@ -44,6 +44,7 @@ namespace VirtualPetsApp
         {
             Pets.RoboPet roboPet = new Pets.RoboPet();
             OrgPet orgPet = new OrgPet();
+            Pets.Vpet pet = new Pets.Vpet();
 
             {
                 bool userStart = true;
@@ -125,16 +126,6 @@ namespace VirtualPetsApp
 
                     }
 
-                    else if (menuChoice.Equals("s"))
-                    {
-                        pet.ShowPetStatus();
-                    }
-
-                    else if (menuChoice.Equals("i"))
-                    {
-                        pet.ShowInfo();
-                    }
-
                     else if (menuChoice.Equals("ii"))
                     {
                         shelter.ShowAllPetsInfo();
@@ -142,8 +133,10 @@ namespace VirtualPetsApp
 
                     else if (menuChoice.Equals("f"))
                     {
+                        shelter.ShowAllPetsInfo();
+                        pet = shelter.SelectOnePet();
                         pet.FeedPet();
-                        Console.WriteLine("You have Fed Your OrgPet! Might Be Time for Some Exercise! \n");
+                        Console.WriteLine("You have Fed Your Pet! Might Be Time for Some Exercise! \n");
                     }
 
                     else if (menuChoice.Equals("ff"))
@@ -154,8 +147,10 @@ namespace VirtualPetsApp
 
                     else if (menuChoice.Equals("p"))
                     {
+                        shelter.ShowAllPetsInfo();
+                        pet = shelter.SelectOnePet();
                         pet.PlayWithPet();
-                        Console.WriteLine("You Just Played With Your OrgPet, It's SO HAPPY! \n");
+                        Console.WriteLine("You Just Played With Your Pet , It's SO HAPPY! \n");
                     }
 
                     else if (menuChoice.Equals("pp"))
@@ -166,8 +161,10 @@ namespace VirtualPetsApp
 
                     else if (menuChoice.Equals("d"))
                     {
+                        shelter.ShowAllPetsInfo();
+                        pet = shelter.SelectOnePet();
                         pet.DrugPet();
-                        Console.WriteLine("You Just Took Your OrgPet to the Doctor. It looks MUCH Healthier! \n");
+                        Console.WriteLine("You Just Took Your Pet to the Doctor. It looks MUCH Healthier! \n");
                     }
 
                     else if (menuChoice.Equals("dd"))
@@ -179,14 +176,15 @@ namespace VirtualPetsApp
                 }
 
 
-                void ExitGame()
-                {
-                    Console.Clear();
-                    Console.WriteLine("Thanks for playing!!");
-                    Console.ReadKey();
-                    Environment.Exit(0);
-                }
             }
+        }
+
+        public void ExitGame()
+        {
+            Console.Clear();
+            Console.WriteLine("Thanks for playing!!");
+            Console.ReadKey();
+            Environment.Exit(0);
         }
     }
 }

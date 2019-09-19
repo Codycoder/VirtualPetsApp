@@ -15,10 +15,12 @@ namespace VirtualPetsApp
         }
         public void ShowAllPetsInfo()
         {
+            int Id = 1;
             foreach (Pets.Vpet pet in pets)
             {
+                Console.Write("ID " + Id + " ");
                 pet.ShowInfo();
-                pet.ShowPetStatus();
+                Id++;
             }
         }
         public void ShowAllPetsStatus()
@@ -56,6 +58,13 @@ namespace VirtualPetsApp
             {
                 pet.LowerStats();
             }
+        }
+
+        public Pets.Vpet SelectOnePet()
+        {
+            Console.WriteLine("Select a pet by picking a number :) ");
+            Pets.Vpet pet = pets[Convert.ToInt32(Console.ReadLine())-1];
+            return pet;
         }
     }
 }
