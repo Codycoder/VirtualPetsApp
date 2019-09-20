@@ -51,25 +51,16 @@ namespace VirtualPetsApp.Pets
 
         public virtual void FeedPet()
         {
-            Console.WriteLine($"You are feeding your Organic Pet {Name}! Might Be Time for Some Exercise! \n\nPress Any Key To Continue!");
-            Console.ReadKey();
-
             Hunger -= 1;
         }
         public virtual void PlayWithPet()
         {
-            Console.WriteLine($"You are playing with your Organic Pet {Name}! It's SO HAPPY! \n\nPress Any Key To Continue!");
-            Console.ReadKey();
-
             Boredom -= 10;
             Hunger += 5;
             Health += 5;
         }
         public virtual void DrugPet()
         {
-            Console.WriteLine($"You took your Organic pet {Name} to the Doctor :) It looks MUCH Healthier!\n\nPress Any Key To Continue!");
-            Console.ReadKey();
-
             Health += 15;
         }
     }

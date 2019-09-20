@@ -15,7 +15,23 @@ namespace VirtualPetsApp
             
             while (userStart)
             {
-                Console.WriteLine("Welcome to Virtual Pets App! Type \"Start\" to play or press \"E\" to quit.");
+                Console.WriteLine(" __   __ __   ______  ______  __  __   ______   __           ______  ______  ______  ______ ");
+                Console.WriteLine("/\\ \\ / //\\ \\ /\\  == \\/\\__  _\\/\\ \\/\\ \\ /\\  __ \\ /\\ \\         /\\  == \\/\\  ___\\/\\__  _\\/\\  ___\\");
+                Console.WriteLine("\\ \\ \\'/ \\ \\ \\\\ \\  __<\\/_/\\ \\/\\ \\ \\_\\ \\\\ \\  __ \\\\ \\ \\____    \\ \\  _-/\\ \\  __\\\\/_/\\ \\/\\ \\___  \\");
+                Console.WriteLine(" \\ \\__|  \\ \\_\\\\ \\_\\ \\_\\ \\ \\_\\ \\ \\_____\\\\ \\_\\ \\_\\\\ \\_____\\    \\ \\_\\   \\ \\_____\\ \\ \\_\\ \\/\\_____\\");
+                Console.WriteLine("  \\/_/    \\/_/ \\/_/ /_/  \\/_/  \\/_____/ \\/_/\\/_/ \\/_____/     \\/_/    \\/_____/  \\/_/  \\/_____/\n");
+                Console.WriteLine("\t ______   __   __    __   __  __   __       ______   ______  ______   ______  ");
+                Console.WriteLine("\t/\\  ___\\ /\\ \\ /\\ \"-./  \\ /\\ \\/\\ \\ /\\ \\     /\\  __ \\ /\\__  _\\/\\  __ \\ /\\  == \\  ");
+                Console.WriteLine("\t\\ \\___  \\\\ \\ \\\\ \\ \\-./\\ \\\\ \\ \\_\\ \\\\ \\ \\____\\ \\  __ \\\\/_/\\ \\/\\ \\ \\/\\ \\\\ \\  __< ");
+                Console.WriteLine("\t \\/\\_____\\\\ \\_\\\\ \\_\\ \\ \\_\\\\ \\_____\\\\ \\_____\\\\ \\_\\ \\_\\  \\ \\_\\ \\ \\_____\\\\ \\_\\ \\_\\");
+                Console.WriteLine("\t  \\/_____/ \\/_/ \\/_/  \\/_/ \\/_____/ \\/_____/ \\/_/\\/_/   \\/_/  \\/_____/ \\/_/ /_/     V3.5");
+                Console.WriteLine("");
+
+                Console.WriteLine("\n\n\t __         ___ __     __                   ||       ___        ___ __     __     o ___    ");
+                Console.WriteLine("\t|__)   __    | /  \\   |__)|    /\\ \\ /       ||      |__    __    | /  \\   |__ \\_/ |  |      ");
+                Console.WriteLine("\t|            | \\__/   |   |__ /--\\ |        ||      |___         | \\__/   |__ / \\ |  |      ");
+                Console.WriteLine("\t\t\t\t\t\t    ||");
+
 
                 string menuChoice = Console.ReadLine().ToLower();
                 Console.Clear();
@@ -29,7 +45,7 @@ namespace VirtualPetsApp
                     Environment.Exit(0);
                 }
 
-                else if (menuChoice.Equals("start"))
+                else if (menuChoice.Equals("p"))
                 {
                     userStart = false;
                 }
