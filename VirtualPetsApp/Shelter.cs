@@ -6,56 +6,105 @@ namespace VirtualPetsApp
 {
     public class Shelter
     {
-        public List<Pet> pets = new List<Pet>();
+        public List<Pets.Vpet> pets = new List<Pets.Vpet>();
 
-        public void AddPetToList(Pet pet)
+        public void AddPetToList(Pets.Vpet pet)
         {
-         
             pets.Add(pet);
         }
         public void ShowAllPetsInfo()
         {
-            foreach (Pet pet in pets)
+            int Id = 1;
+            foreach (Pets.Vpet pet in pets)
             {
+                Console.Write("Pet " + Id + " ");
                 pet.ShowInfo();
-                pet.ShowPetStatus();
+                Id++;
             }
         }
         public void ShowAllPetsStatus()
-        {  
-            foreach(Pet pet in pets)
+        {
+            int Id = 1;
+            foreach (Pets.Vpet pet in pets)
             {
-                pet.ShowPetStatus(); 
+                Console.Write("Pet " + Id + " ");
+                pet.ShowPetStatus();
+                Id++;
             }
 
         }
         public void FeedPet()
         {
-            foreach (Pet pet in pets)
+            Console.WriteLine("You are feeding/oiling all your pets! \n\nPress Any Key To Continue!");
+            Console.ReadKey();
+
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.FeedPet();
             }
         }
         public void VetPets()
         {
-            foreach (Pet pet in pets)
+            Console.WriteLine("You took all your pets to Doctor/Maintenance Shop! They are all better :) \n\nPress Any Key To Continue!");
+            Console.ReadKey();
+
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.DrugPet();
             }
         }
         public void PlayWithAll()
         {
-            foreach (Pet pet in pets)
+            Console.WriteLine("You played with all your pets! They're SO HAPPY! \n\nPress Any Key To Continue!");
+            Console.ReadKey();
+
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.PlayWithPet();
             }
         } 
         public void LowerAllStats()
         {
-            foreach (Pet pet in pets)
+            foreach (Pets.Vpet pet in pets)
             {
                 pet.LowerStats();
             }
+        }
+
+        public void ShowAllInfoAndStatus()
+        {
+            foreach (Pets.Vpet pet in pets)
+            {
+                pet.ShowPetInfoAndStatus();
+            }
+        }
+
+        public Pets.Vpet SelectOnePet()
+        {
+            Console.WriteLine("Select a pet by picking a number :) ");
+            Pets.Vpet pet = pets[Convert.ToInt32(Console.ReadLine())-1];
+            return pet;
+        }
+
+        public void AdoptAPet()
+        {
+            int Id = 1;
+
+            Console.WriteLine("Select a pet to adopt by picking a number :) \n\n");
+
+            foreach (Pets.Vpet pet in pets)
+            {
+                Console.Write("Pet " + Id + " ");
+                pet.ShowInfo();
+                Id++;
+            }
+            Pets.Vpet adoptedPet = pets[Convert.ToInt32(Console.ReadLine()) - 1];
+
+            Console.Clear();
+            Console.WriteLine("Your pet was Adopted :) \nPress Any Key To Continue!");
+            Console.ReadKey();
+
+            pets.Remove(adoptedPet);
         }
     }
 }
